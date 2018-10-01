@@ -67,4 +67,4 @@ def normalize(image):
 
 def sigmoid_normalize(image,a):
     import math
-    return 255 * (1 + math.e ** ((-a) ** -1 * (image - 128))) ** -1
+    return (255 * (1 + math.e ** ((-a) ** -1 * (image - 128))) ** -1).astype(int)
